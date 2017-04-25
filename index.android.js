@@ -14,7 +14,8 @@ const App = () => {
   return (
     <View style={main}>
       <Image
-        source={ require('./imgs/test.png') }
+        source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
+        style={{width: 200, height: 200}}
       />
     </View>
   );
