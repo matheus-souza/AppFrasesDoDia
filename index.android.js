@@ -4,19 +4,23 @@ import { Text, View, Image, AppRegistry } from 'react-native';
 const Style = {
   main: {
     paddingTop: 40
+  },
+  image: {
+    justifyContent: 'flex-end',
+    paddingBottom: 5,
+    alignItems: 'center'
   }
 };
 
 
 const App = () => {
-  const { main } = Style;
+  const { main, image } = Style;
 
   return (
     <View style={main}>
-      <Image
-        source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-        style={{width: 200, height: 200}}
-      />
+      <Image style={image} source={ require('./imgs/test.png') } >
+        <Text>Legenda da foto</Text>
+      </Image>
     </View>
   );
 };
