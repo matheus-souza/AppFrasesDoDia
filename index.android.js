@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, AppRegistry } from 'react-native';
+import { Text, View, Image, TouchableOpacity, Alert, AppRegistry } from 'react-native';
 
 const Style = {
   main: {
@@ -33,6 +33,7 @@ const buttonPressed = () => {
 
   let phraseSelected = phrases[randomNumber];
 
+  Alert.alert(phraseSelected);
 }
 
 const App = () => {
