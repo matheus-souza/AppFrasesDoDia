@@ -1,26 +1,39 @@
 import React from 'react';
-import { Text, View, Image, AppRegistry } from 'react-native';
+import { Text, View, Image, TouchableOpacity, AppRegistry } from 'react-native';
 
 const Style = {
   main: {
-    paddingTop: 40
-  },
-  image: {
-    justifyContent: 'flex-end',
-    paddingBottom: 5,
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center'
+  },
+  button: {
+    backgroundColor: '#538530',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    marginTop: 20
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold'
   }
 };
 
+const buttonPressed = () => {
+
+}
 
 const App = () => {
-  const { main, image } = Style;
+  const { main, button, buttonText } = Style;
 
   return (
     <View style={main}>
-      <Image style={image} source={ require('./imgs/test.png') } >
-        <Text>Legenda da foto</Text>
-      </Image>
+      <Image source={require('./imgs/logo.png')}/>
+
+      <TouchableOpacity style={button}>
+        <Text style={buttonText}>Nova Frase</Text>
+      </TouchableOpacity>
     </View>
   );
 };
